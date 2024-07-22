@@ -25,8 +25,6 @@ export const tmdbApi = createApi({
                     return `movie/${genreIdOrCategoryName}?page=${page}&api_key=${tmdbApiKey}`
                 }
 
-                console.log(genreIdOrCategoryName);
-
                 //* Get Movies by Genre
                 if (genreIdOrCategoryName && typeof genreIdOrCategoryName === 'number') {
                     return `discover/movie?with_genres=${genreIdOrCategoryName}&page=${page}&api_key=${tmdbApiKey}`
@@ -40,6 +38,20 @@ export const tmdbApi = createApi({
         //* Get Movie
         getMovie: builder.query({
             query: (id) => `/movie/${id}?append_to_response=videos,credits&api_key=${tmdbApiKey}`
+        }),
+
+        //* Get User Specific Lists
+        getRecommendations: builder.query({
+            query: ({ movie_id, list }) => `/movie/${movie_id}/${list}?api_key=${tmdbApiKey}`
+        }),
+
+        //* Get Actor
+        getActorsDetails: builder.query({
+            query: (id) => `/person/${id}?api_key=${tmdbApiKey}`
+        }),
+
+        getMoviesByActorId: builder.query({
+            query: ({ id, page }) => `/discover/movie?with_cast${id}&page=${page}&api_key=${tmdbApiKey}`
         })
     }),
 });
@@ -48,4 +60,7 @@ export const {
     useGetGenresQuery,
     useGetMoviesQuery,
     useGetMovieQuery,
+    useGetRecommendationsQuery,
+    useGetActorsDetailsQuery,
+    useGetMoviesByActorIdQuery,
 } = tmdbApi;
