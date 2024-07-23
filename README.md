@@ -53,16 +53,16 @@
 
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](netflix-clone-dom.netlify.app/)
+[![Netflix Clone Screen Shot][product-screenshot]](netflix-clone-dom.netlify.app/)
 
 Features include:
 
-User Authentication,
-Light and Dark mode,
-API calls with Axios and Redux,
-Actors and Movie Details Page,
-Watchlist and List of Favorite Movies,
-Movie Search Functionality,
+- User Authentication,
+- Light and Dark mode,
+- API calls with Axios and Redux,
+- Actors and Movie Details Page,
+- Watchlist and List of Favorite Movies,
+- Movie Search Functionality,
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
