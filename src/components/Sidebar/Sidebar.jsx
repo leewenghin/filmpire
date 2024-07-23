@@ -25,6 +25,10 @@ const Sidebar = ({ setMobileOpen }) => {
     const { data, isFetching } = useGetGenresQuery();
     const dispatch = useDispatch();
 
+    useEffect(() => {
+        setMobileOpen(false);
+    }, [genreIdOrCategoryName])
+
     return (
         <>
             <Link to="/" className={classes.imageLink}>
@@ -41,7 +45,7 @@ const Sidebar = ({ setMobileOpen }) => {
                     <Link key={value} className={classes.links} to='/'>
                         <ListItemButton onClick={() => dispatch(selectGenreOrCategory(value))}>
                             <ListItemIcon>
-                                <img src={genreIcons[label.toLowerCase()]} className={classes.genreImages} height={30} />
+                                <img src={genreIcons[label.toLowerCase()]} className={classes.genreImage} height={30} />
                             </ListItemIcon>
                             <ListItemText primary={label} />
                         </ListItemButton>
@@ -60,7 +64,7 @@ const Sidebar = ({ setMobileOpen }) => {
                         <Link key={id} className={classes.links} to='/'>
                             <ListItemButton onClick={() => dispatch(selectGenreOrCategory(id))}>
                                 <ListItemIcon>
-                                    <img src={genreIcons[name.toLowerCase()]} className={classes.genreImages} height={30} />
+                                    <img src={genreIcons[name.toLowerCase()]} className={classes.genreImage} height={30} />
                                 </ListItemIcon>
                                 <ListItemText primary={name} />
                             </ListItemButton>
