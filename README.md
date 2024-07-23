@@ -15,7 +15,7 @@
     <a href="https://github.com/leewenghin/filmpire.git"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="netflix-clone-dom.netlify.app/">View Demo</a>
+    <a href="https://netflix-clone-dom.netlify.app/">View Demo</a>
     ·
     <a href="https://github.com/leewenghin/filmpire/issues/new?labels=bug&template=bug-report---.md">Report Bug</a>
     ·
