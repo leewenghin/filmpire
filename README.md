@@ -43,9 +43,6 @@
     <li><a href="#usage">Usage</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
 </details>
 
@@ -53,7 +50,7 @@
 
 ## About The Project
 
-[![Netflix Clone Screen Shot][product-screenshot]](netflix-clone-dom.netlify.app/)
+[![Netflix Clone Screen Shot][product-screenshot]](https://netflix-clone-dom.netlify.app/)
 
 Features include:
 
