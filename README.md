@@ -15,7 +15,7 @@
     <a href="https://github.com/leewenghin/filmpire.git"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://netflix-clone-dom.netlify.app/">View Demo</a>
+    <a href="https://filmpire-netflix-clone.vercel.app/">View Demo</a>
     ·
     <a href="https://github.com/leewenghin/filmpire/issues/new?labels=bug&template=bug-report---.md">Report Bug</a>
     ·
@@ -50,7 +50,7 @@
 
 ## About The Project
 
-[![Netflix Clone Screen Shot][product-screenshot]](https://netflix-clone-dom.netlify.app/)
+[![Netflix Clone Screen Shot][product-screenshot]](https://filmpire-netflix-clone.vercel.app/)
 
 Features include:
 
