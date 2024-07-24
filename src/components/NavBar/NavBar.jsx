@@ -13,7 +13,7 @@ import { fetchToken, createSessionId, moviesApi } from '../../utils'
 import useStyles from './styles'
 
 const NavBar = () => {
-    const { isAuthenticated, user } = useSelector(userSelector)
+    const { isAuthenticated, user } = useSelector(userSelector);
     const [mobileOpen, setMobileOpen] = useState(false);
     const classes = useStyles();
     const isMobile = useMediaQuery('(max-width:600px)');
@@ -21,28 +21,24 @@ const NavBar = () => {
     const dispatch = useDispatch();
 
     const colorMode = useContext(ColorModeContext)
-    const token = localStorage.getItem('request_token')
-    const sessionIdFromLocalStorage = localStorage.getItem('session_id')
+    const token = localStorage.getItem('request_token');
+    const sessionIdFromLocalStorage = localStorage.getItem('session_id');
 
     useEffect(() => {
         const logInUser = async () => {
             if (token) {
                 if (sessionIdFromLocalStorage) {
-                    const { data: userData } = await moviesApi.get(`./account?session_id=${sessionIdFromLocalStorage}`)
-
-                    dispatch(setUser(userData))
+                    const { data: userData } = await moviesApi.get(`/account?session_id=${sessionIdFromLocalStorage}`);
+                    dispatch(setUser(userData));
                 } else {
                     const sessionId = await createSessionId();
-
-                    const { data: userData } = await moviesApi.get(`./account?session_id=${sessionId}`)
-
-                    dispatch(setUser(userData))
+                    const { data: userData } = await moviesApi.get(`/account?session_id=${sessionId}`);
+                    dispatch(setUser(userData));
                 }
             }
         }
-
         logInUser();
-    }, [token, dispatch, sessionIdFromLocalStorage])
+    }, [token])
 
     return (
         <>
